@@ -14,12 +14,14 @@ public class b extends d {
 	public GeoGebraOGPOutputProverProtocol proxy;
 
 	public Vector<String> a() {
-		log.info(CLASS + ".getNdgList()");
-		return proxy.getNdgList();
+		Vector<String> ndgList = proxy.getNdgList();
+		log.info(CLASS + ".getNdgList() = {}", ndgList);
+		return ndgList;
 	}
 
 	public String a(String resName) {
-		log.info(CLASS + ".getOutputResult(\"{}\")", resName);
-		return proxy.getOutputResult(resName);
+		String outputResult = proxy.getOutputResult(resName);
+		log.info(CLASS + ".getOutputResult(\"{}\") = \"{}\"", resName, outputResult);
+		return outputResult;
 	}
 }
